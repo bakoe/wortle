@@ -70,16 +70,26 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                       >
                         Wordle von Josh Wardle
                       </a>
-                      .
-
-                      Die verwendete Wordliste stammt von <a
+                      . Die verwendete Wordliste stammt von{" "}
+                      <a
                         href="https://github.com/dys2p/wordlists-de"
                         className="underline font-bold"
                         rel="nofollow"
                       >
                         https://github.com/dys2p/wordlists-de
-                      </a>.
+                      </a>
+                      .
                     </p>
+                    <hr className="mt-2" />
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-800">Source Code: <a
+                        href="https://github.com/bakoe/wortle"
+                        className="underline font-bold"
+                        rel="nofollow"
+                      >
+                        https://github.com/bakoe/wortle
+                      </a></p>
+                    </div>
                   </div>
                 </div>
               </div>
