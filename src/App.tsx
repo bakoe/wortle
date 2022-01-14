@@ -26,7 +26,7 @@ function App() {
     if (event.key === "Backspace") {
       return onDelete();
     }
-    if (event.key.match(/[a-zA-Z]/i)) {
+    if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
       return onChar(event.key.toUpperCase());
     }
   };
