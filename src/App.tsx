@@ -18,6 +18,26 @@ function App() {
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false);
   const [isGameLost, setIsGameLost] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Enter") {
+      return onEnter();
+    }
+    if (event.key === "Backspace") {
+      return onDelete();
+    }
+    if (event.key.match(/[a-zA-Z]/i)) {
+      return onChar(event.key.toUpperCase());
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
   useEffect(() => {
     if (isGameWon) {
       setIsWinModalOpen(true);
@@ -63,7 +83,10 @@ function App() {
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <Alert message="Wort ist nicht in der Wortliste." isOpen={isWordNotFoundAlertOpen} />
+      <Alert
+        message="Wort ist nicht in der Wortliste."
+        isOpen={isWordNotFoundAlertOpen}
+      />
       <Alert
         message={`Du hast leider verloren – das gesuchte Wort war ${solution}.`}
         isOpen={isGameLost}
