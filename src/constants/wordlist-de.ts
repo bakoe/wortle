@@ -1,4 +1,4 @@
-// Source: https://github.com/dys2p/wordlists-de/blob/main/de-7776-v1.txt
+// Source: https://github.com/dys2p/wordlists-de/blob/main/de-7776-v1.txt (Public Domain/The Unlicense)
 // (all words with more than five characters filtered out using the RegEx `.{6,}\n` for replacement with ``)
 export const WORDS = [
   "aalen",
