@@ -51,46 +51,54 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    How to play
+                    So funktioniert’s
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Guess the WORDLE in 6 tries. After each guess, the color
-                      of the tiles will change to show how close your guess was
-                      to the word.
+                      Errate das WORTLE in 6 Versuchen. Nach jedem Versuch
+                      zeigen dir die Farben der Kacheln an, wie nah du dem
+                      gesuchten Wort kamst.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="W" status="correct" />
-                      <Cell value="E" />
-                      <Cell value="A" />
-                      <Cell value="R" />
-                      <Cell value="Y" />
+                      <Cell value="A" status="correct" />
+                      <Cell value="U" status="absent" muted />
+                      <Cell value="T" status="absent" muted />
+                      <Cell value="O" status="absent" muted />
+                      <Cell value="R" status="absent" muted />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter W is in the word and in the correct spot.
+                      Grün: Der Buchstabe A kommt im Wort vor und steht an der
+                      richtigen Stelle.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="P" />
-                      <Cell value="I" />
-                      <Cell value="L" status="present" />
-                      <Cell value="O" />
-                      <Cell value="T" />
+                      <Cell value="A" status="correct" muted />
+                      <Cell value="B" status="absent" muted />
+                      <Cell value="E" status="present" />
+                      <Cell value="N" status="present" />
+                      <Cell value="D" status="absent" muted />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter L is in the word but in the wrong spot.
+                      Orange: Die Buchstaben E und N kommen im Wort vor, stehen aber
+                      noch nicht an der richtigen Stelle.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="V" />
-                      <Cell value="A" />
-                      <Cell value="G" />
-                      <Cell value="U" status="absent" />
-                      <Cell value="E" />
+                      <Cell value="A" status="correct" muted />
+                      <Cell value="F" status="absent" />
+                      <Cell value="F" status="absent" />
+                      <Cell value="E" status="correct" muted />
+                      <Cell value="N" status="correct" muted />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter U is not in the word in any spot.
+                      Grau: Der Buchstabe F kommt an keiner Stelle im Wort vor.
+                    </p>
+                  </div>
+                  <hr className="mt-2" />
+                  <div className="mt-2">
+                  <p className="text-sm text-gray-800">
+                      Es wird jeden Tag ein neues Wortle gesucht – aber immer nur eins pro Tag!
                     </p>
                   </div>
                 </div>

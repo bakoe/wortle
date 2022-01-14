@@ -50,24 +50,35 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    About
+                    Über dieses Spiel
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      This is an open source clone of the game Wordle -{" "}
+                      Dies ist ein Fork eines{" "}
                       <a
                         href="https://github.com/hannahcode/wordle"
                         className="underline font-bold"
+                        rel="nofollow"
                       >
-                        check out the code here
+                        Open-Source-Klons von Hannah Park
                       </a>{" "}
-                      and{" "}
+                      des Spiels{" "}
                       <a
                         href="https://www.powerlanguage.co.uk/wordle/"
                         className="underline font-bold"
+                        rel="nofollow"
                       >
-                        play the original here
+                        Wordle von Josh Wardle
                       </a>
+                      .
+
+                      Die verwendete Wordliste stammt von <a
+                        href="https://github.com/dys2p/wordlists-de"
+                        className="underline font-bold"
+                        rel="nofollow"
+                      >
+                        https://github.com/dys2p/wordlists-de
+                      </a>.
                     </p>
                   </div>
                 </div>

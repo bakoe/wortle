@@ -63,17 +63,20 @@ function App() {
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <Alert message="Word not found" isOpen={isWordNotFoundAlertOpen} />
+      <Alert message="Wort ist nicht in der Wortliste." isOpen={isWordNotFoundAlertOpen} />
       <Alert
-        message={`You lost, the word was ${solution}`}
+        message={`Du hast leider verloren – das gesuchte Wort war ${solution}.`}
         isOpen={isGameLost}
       />
       <div className="flex w-80 mx-auto items-center mb-8">
-        <h1 className="text-xl grow font-bold">Not Wordle</h1>
-        <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer"
+        <h1 className="text-xl grow font-bold">Wortle</h1>
+        <div
+          className="flex cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
-        />
+        >
+          <h2 className="mr-2">So funktioniert’s</h2>
+          <InformationCircleIcon className="h-6 w-6" />
+        </div>
       </div>
       <Grid guesses={guesses} currentGuess={currentGuess} />
       <Keyboard
@@ -101,7 +104,7 @@ function App() {
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         onClick={() => setIsAboutModalOpen(true)}
       >
-        About this game
+        Über dieses Spiel
       </button>
     </div>
   );
