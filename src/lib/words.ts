@@ -1,4 +1,4 @@
-import { WORDS } from "../constants/wordlist";
+import { WORDS } from "../constants/wordlist-de";
 
 export const isWordInWordList = (word: string) => {
   return WORDS.includes(word.toLowerCase());
